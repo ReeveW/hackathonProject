@@ -22,18 +22,16 @@ struct LanguageData {
     MemoryManagement mem;
 };
 
-
-
 class Model {
     private:
-    LanguageData answer;
+        LanguageData answer;
     public:
-    Model();
-    ~Model();
-    std::string memoryGuess(MemoryManagement mem);
-    std::string parentGuess(std::string p);
-    std::string implementationGuess(Implementation i);
-    std::string levelGuess(Level level);
-    std::string yearGuess(int year);
-    std::string guess(std::string language);
+        Model();
+        ~Model();
+        std::string memoryGuess(MemoryManagement mem);
+        std::string parentGuess(std::string p);
+        std::string implementationGuess(Implementation i);
+        std::string levelGuess(Level level);
+        std::string yearGuess(int year);
+        std::string guess(std::string language);
 };
