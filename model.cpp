@@ -57,6 +57,10 @@ std::string Model::implementationGuess(Implementation i) {
     }
 }
 
-std::string Model::guess(std::string language) {
+std::string Model::guess(std::string guess) {
+    
+}
+
+bool Model::isValidGuess(std::string guess){
     
 }
