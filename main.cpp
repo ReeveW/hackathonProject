@@ -8,7 +8,8 @@
 
 int main(){
     Model m;
-    std::string s = m.guess("C++");
-    std::cout << s << std::endl;
+    View v;
+    Controller c(m, v);
+    c.run();
     return 0;
 }

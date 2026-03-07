@@ -1,7 +1,10 @@
 #include "controller.h"
 #include <iostream>
 
-void Controller::run(Model &model, View &view) {
+Controller::Controller(Model &model, View &view) 
+    : model(model), view(view) {}
+
+void Controller::run() {
     std::cout << "Welcome to Howardle! A -dle style game for programming languages!\n";
 
     while (true) {

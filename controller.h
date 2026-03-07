@@ -5,5 +5,10 @@
 
 class Controller {
     public:
-        void run(Model &model, View &view);
+        Controller(Model &model, View &view);
+        void run();
+
+    private:
+        Model &model;
+        View &view;
 };
