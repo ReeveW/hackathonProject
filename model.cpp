@@ -1,4 +1,6 @@
 #include <string>
+#include <vector>
+
 #include "model.h"
 
 Model::Model() {
@@ -101,21 +103,20 @@ std::string Model::implementationGuess(Implementation i) {
     return s + " | ";
 }
 
-std::string Model::guess(std::string guess) {
+std::vector<std::string> Model::guess(std::string guess) {
     LanguageData guessLanguage;
     for(auto l : languages){
         if(l.name == guess){
             guessLanguage = l;
         }
     }
-    std::string s;
-    s += yearGuess(guessLanguage.releaseYear);
-    s += levelGuess(guessLanguage.level);
-    s += implementationGuess(guessLanguage.implementation);
-    s += parentGuess(guessLanguage.parentLanguage);
-    s += memoryGuess(guessLanguage.mem);
-    s += colour("white");
-    return s + "\n";
+    std::vector<std::string> v(5);
+    v.push_back(yearGuess(guessLanguage.releaseYear));
+    v.push_back(levelGuess(guessLanguage.level));
+    v.push_back(implementationGuess(guessLanguage.implementation));
+    v.push_back(parentGuess(guessLanguage.parentLanguage));
+    v.push_back(memoryGuess(guessLanguage.mem) + colour("white"));
+    return v;
 }
 
 bool Model::isValidGuess(std::string guess){
