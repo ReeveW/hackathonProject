@@ -12,7 +12,8 @@ void Controller::run() {
 
         //making sure that the language guess is a valid one
         while(!model.isValidGuess(guess)) {
-            std::cout << "Invalid Language Guess.\nPlease choose between C++, Java, and Python.\n";
+            std::cout << "Invalid Language Guess.\nPlease choose between C++ and Python.\n";
+            std::cout << std::endl;
             guess = view.ask();
         }
 
