@@ -34,7 +34,7 @@ std::string Model::yearGuess(int year) {
             s = colour("yellow") + std::to_string(year);
         }
     }
-    return s + "\n";
+    return s + " | ";
 }
 
 std::string Model::levelGuess(Level level){
@@ -49,7 +49,7 @@ std::string Model::levelGuess(Level level){
     }else{
         s = colour("red") + l;
     }
-    return s + "\n";
+    return s + " | ";
 }
 
 std::string Model::memoryGuess(MemoryManagement mem) {
@@ -64,27 +64,41 @@ std::string Model::memoryGuess(MemoryManagement mem) {
     }else{
         s = colour("red") + l;
     }
-    return s + "\n";
+    return s;
 }
 
 std::string Model::parentGuess(ParentLanguage p) {
-    if(answer.parentLanguage == p){
-        //green
+    std::string l, s;
+    if(p == ParentLanguage::C){
+        l = "C";
     }else{
-        //red
+        l = "ABC";
     }
-    return "";
+    if(answer.parentLanguage == p){
+        s = colour("green") + l;
+    }else{
+        s = colour("red") + l;
+    }
+    return s + " | ";
 }
 
 std::string Model::implementationGuess(Implementation i) {
-    if(answer.implementation == i){
-        //green
-    }else if(answer.implementation == Implementation::Hybrid){
-        //orange
+    std::string l, s;
+    if(i == Implementation::Compiled){
+        l = "Compiled";
+    }else if(i == Implementation::Hybrid){
+        l = "Hybrid";
     }else{
-        //red
+        l = "Interpreted";
     }
-    return "";
+    if(answer.implementation == i){
+        s = colour("green") + l;
+    }else if(answer.implementation == Implementation::Hybrid){
+        s = colour("yellow") + l;
+    }else{
+        s = colour("red") + l;
+    }
+    return s + " | ";
 }
 
 std::string Model::guess(std::string guess) {
