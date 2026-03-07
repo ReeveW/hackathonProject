@@ -1,10 +1,12 @@
 #include <string>
 #include <vector>
+#include <stdlib.h>
 
 #include "model.h"
 
 Model::Model() {
-    answer = languages[0];
+    int n = rand() % languages.size();
+    answer = languages[n];
 }
 
 std::string colour(std::string c){
