@@ -40,7 +40,7 @@ std::string Model::yearGuess(int year) {
             s = colour("yellow") + std::to_string(year);
         }
     }
-    return s + " | ";
+    return s;
 }
 
 std::string Model::levelGuess(Level level){
@@ -55,7 +55,7 @@ std::string Model::levelGuess(Level level){
     }else{
         s = colour("red") + l;
     }
-    return s + " | ";
+    return s;
 }
 
 std::string Model::memoryGuess(MemoryManagement mem) {
@@ -85,7 +85,7 @@ std::string Model::parentGuess(ParentLanguage p) {
     }else{
         s = colour("red") + l;
     }
-    return s + " | ";
+    return s;
 }
 
 std::string Model::implementationGuess(Implementation i) {
@@ -104,7 +104,7 @@ std::string Model::implementationGuess(Implementation i) {
     }else{
         s = colour("red") + l;
     }
-    return s + " | ";
+    return s;
 }
 
 std::vector<std::string> Model::guess(std::string guess) {
