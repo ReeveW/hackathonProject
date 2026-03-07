@@ -6,11 +6,15 @@ enum class Level {
 };
 
 enum class Implementation {
-    Compiled, Interpreted
+    Compiled, Interpreted, Hybrid
 };
 
 enum class MemoryManagement {
-    Manual, GarbageCollected, 
+    Manual, GarbageCollected
+};
+
+enum class ParentLanguage {
+    C, ABC, 
 };
 
 struct LanguageData {
