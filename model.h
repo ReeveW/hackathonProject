@@ -17,4 +17,5 @@ class Model {
         std::vector<std::string> guess(std::string guess);
         bool isRight(std::string guess);
         bool isValidGuess(std::string guess);
+        std::string getFact();
 };

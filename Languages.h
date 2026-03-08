@@ -31,6 +31,7 @@ struct LanguageData {
     Implementation implementation;
     ParentLanguage parentLanguage;
     MemoryManagement mem;
+    std::string fact;
 };
 
 extern std::vector<LanguageData> languages;

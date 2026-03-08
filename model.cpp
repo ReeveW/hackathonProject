@@ -135,7 +135,11 @@ bool Model::isValidGuess(std::string guess) {
 bool Model::isRight(std::string guess) {
     if(guess == answer.name){
         return true;
-    }else{
+    } else { 
         return false;
     }
+}
+
+std::string Model::getFact() {
+    return answer.fact;
 }

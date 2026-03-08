@@ -24,7 +24,8 @@ void Controller::run() {
         printAns(ans);
 
         if (model.isRight(guess)) {
-                std::cout << "\nCorrect!! Thanks for playing!\n";
+                std::cout << "\nCorrect!!\n";
+                std::cout << "Fun Fact: " << model.getFact() << "Thanks for playing!\n";
                 break;
         }
 
