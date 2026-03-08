@@ -26,6 +26,7 @@ enum class ParentLanguage {
     Java,
     None,
     B,
+    JavaScript,
 };
 
 struct LanguageData {
