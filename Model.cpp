@@ -61,8 +61,10 @@ std::string Model::memoryGuess(MemoryManagement mem) {
     std::string l, s;
     if(mem == MemoryManagement::GarbageCollected) {
         l = "Garbage Collected";
-    } else {
+    } else if(mem == MemoryManagement::Manual){
         l = "Manual";
+    }else{
+        l = "ARC";
     }
     if(answer.mem == mem) {
         s = colour("green") + l;
@@ -80,8 +82,12 @@ std::string Model::parentGuess(ParentLanguage p) {
         l = "ABC";
     }else if(p == ParentLanguage::Java){
         l = "Java";
-    }else {
+    }else if(p == ParentLanguage::None){
         l = "None";
+    }else if(p == ParentLanguage::B){
+        l = "B";
+    }else{
+        l = "JavaScript";
     }
     if(answer.parentLanguage == p) {
         s = colour("green") + l;
