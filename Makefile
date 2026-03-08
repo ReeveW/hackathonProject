@@ -8,7 +8,7 @@ CXXFLAGS = -Wall -g
 TARGET = main
 
 # Source files
-SRCS = main.cpp controller.cpp model.cpp view.cpp Languages.cpp
+SRCS = main.cpp Controller.cpp Model.cpp View.cpp Languages.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)

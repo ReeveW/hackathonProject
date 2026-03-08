@@ -1,7 +1,7 @@
 #pragma once
 
+#include "Model.h"
 #include <string>
-#include "model.h"
 
 class View {
     public:

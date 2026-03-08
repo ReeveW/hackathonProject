@@ -1,6 +1,6 @@
+#include "Controller.h"
 #include <iostream>
 #include <iomanip>
-#include "controller.h"
 
 Controller::Controller(Model &model, View &view) 
     : model(model), view(view) {}

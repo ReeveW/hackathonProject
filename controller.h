@@ -1,9 +1,9 @@
 #pragma once
 
+#include "Model.h"
+#include "View.h"
 #include <string>
 #include <vector>
-#include "model.h"
-#include "view.h"
 
 class Controller {
     public:
