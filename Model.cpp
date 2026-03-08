@@ -28,15 +28,15 @@ std::string Model::yearGuess(int year) {
         s = colour("green") + std::to_string(year);
     } else if(answer.releaseYear > year) {
         if(answer.releaseYear - 5 > year) {
-            s = colour("red") + std::to_string(year);
+            s = colour("red") + std::to_string(year) + " ^";
         } else {
-            s = colour("yellow") + std::to_string(year);
+            s = colour("yellow") + std::to_string(year) + " ^";
         }
     } else {
         if(answer.releaseYear + 5 < year) {
-            s = colour("red") + std::to_string(year);
+            s = colour("red") + std::to_string(year) + " v";
         } else {
-            s = colour("yellow") + std::to_string(year);
+            s = colour("yellow") + std::to_string(year) + " v";
         }
     }
     return s;
