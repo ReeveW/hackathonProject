@@ -3,7 +3,6 @@
 #include <string>
 #include "Languages.h"
 
-
 class Model {
     private:
         LanguageData answer;
