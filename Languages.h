@@ -16,7 +16,8 @@ enum class Implementation {
 
 enum class MemoryManagement {
     Manual,
-    GarbageCollected
+    GarbageCollected,
+    ARC,
 };
 
 enum class ParentLanguage {
